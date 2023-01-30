@@ -56,5 +56,5 @@ if __name__ == '__main__':
     # cors = CORS(resources={
     #     r"/*": {"origins": Config.CORS_ALLOWED_ORIGINS}
     # })
-    app.run()
+    app.run(host='0.0.0.0')
 
