@@ -49,4 +49,4 @@ if __name__ == '__main__':
     #     r"/*": {"origins": Config.CORS_ALLOWED_ORIGINS}
     # })
     app = create_app(Config())
-    app.run(port=8000)
+    app.run()
