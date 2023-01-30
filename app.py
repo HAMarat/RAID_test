@@ -44,9 +44,17 @@ def create_data(application, db):
         db.session.commit()
 
 
+app = create_app(Config())
+
+
+@app.route('/a')
+def ret():
+    return "Стартовая страница"
+
+
 if __name__ == '__main__':
     # cors = CORS(resources={
     #     r"/*": {"origins": Config.CORS_ALLOWED_ORIGINS}
     # })
-    app = create_app(Config())
     app.run()
+
