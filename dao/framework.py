@@ -12,4 +12,4 @@ class FrameworkDAO:
         return self.session.query(Framework).all()
 
     def get_filter_by_language(self, filter_data):
-        return self.session.query(Framework).filter(Framework.name == filter_data).one()
+        return self.session.query(Framework).filter(Framework.name.like(filter_data)).first()

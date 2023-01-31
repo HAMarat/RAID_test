@@ -17,4 +17,6 @@ class FrameworkView(Resource):
 class FrameworksView(Resource):
     def get(self, language):
         framework = framework_service.get_filter_by_language(language)
-        return FrameworkSchema().dump(framework), 200
+        if framework:
+            return FrameworkSchema().dump(framework), 200
+        return f"Фреймворк {language} не найден"

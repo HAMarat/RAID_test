@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_restx import Api
-# from flask_cors import CORS
 
 from setup_db import db
 from config import Config
@@ -45,9 +44,6 @@ def create_data(application, db):
 
 
 if __name__ == '__main__':
-    # cors = CORS(resources={
-    #     r"/*": {"origins": Config.CORS_ALLOWED_ORIGINS}
-    # })
     app = create_app(Config())
     app.run(port=8000)
 
